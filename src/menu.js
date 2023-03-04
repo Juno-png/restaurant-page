@@ -44,7 +44,7 @@ function createMenu() {
 
 function createApps(name, description) {
     const apps = document.createElement('div');
-    apps.classList.add('appetizers');
+    apps.classList.add('appetizers', 'item');
 
     const appName = document.createElement('h2');
     appName.textContent = name;
@@ -65,7 +65,7 @@ function createApps(name, description) {
 
 function createSushiSash(name, description) {
     const sushiSash = document.createElement('div');
-    sushiSash.classList.add('sushi-sash');
+    sushiSash.classList.add('sushi-sash', 'item');
 
     const ssName = document.createElement('h2');
     ssName.textContent = name;
@@ -86,7 +86,7 @@ function createSushiSash(name, description) {
 
 function createRolls(name, description) {
     const rolls = document.createElement('div');
-    rolls.classList.add('rolls');
+    rolls.classList.add('rolls', 'item');
 
     const rollName = document.createElement('h2');
     rollName.textContent = name;

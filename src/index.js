@@ -79,7 +79,9 @@ function createHome() {
   home.classList.add('home')
 
   const imgContainer = document.createElement('div');
+  imgContainer.classList.add('image')
   const img = document.createElement('img');
+  img.classList.add('home-image');
   img.src = sushiImg;
   img.alt = 'sushi';
   imgContainer.appendChild(img);
@@ -87,7 +89,7 @@ function createHome() {
   const copyContainer = document.createElement("div");
   const copy = document.createElement("p");
   copy.textContent =
-    "Sapporo Sushi is a contemporary restaurant that specializes in serving authentic Japanese cuisine. Located in the heart of the city, the restaurant offers a sophisticated and stylish dining experience that's perfect for any occasion. From sushi rolls to sashimi, the menu at Sapporo Sushi features a variety of fresh and delicious dishes that are prepared with the finest ingredients. Whether you're looking for a romantic dinner for two or a group gathering with friends, Sapporo Sushi is the perfect destination to satisfy your cravings for delectable Japanese food. Come and experience the flavors of Japan at Sapporo Sushi!";
+    "Sapporo Sushi offers a sophisticated and stylish dining experience that's perfect for any occasion. From sushi rolls to sashimi, the menu at Sapporo Sushi features a variety of fresh and delicious dishes that are prepared with the finest ingredients. Whether you're looking for a romantic dinner for two or a group gathering with friends, Sapporo Sushi is the perfect destination to satisfy your cravings for delectable Japanese food. Come and experience the flavors of Japan at Sapporo Sushi!";
 
   copyContainer.appendChild(copy);
 
