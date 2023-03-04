@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+:root {
+    --font-color: #FEFEFE;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+html {
+    font-size: 60%;
+    line-height: 1.6;
+}
+
+body {
+    font-family: font-family: 'Noto Sans JP', sans-serif; 
+    font-size: 1.6rem;
+    color: var(--font-color);
+    background-image: url('images/background.png');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+header {
+    font-size: 2.4rem;
+}
+
+h1,
+h2 {
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+    color:;
+}
+
+img {
+    display: block;
+}
+
+button {
+    font-family: inherit;
+    color: inherit;
+    cursor: pointer;
+    border-style: none;
+    outline: none;
+}
+
+/* header styling Restaurant name and Nav bar buttons */
+.header {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    width: 100%;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, .9);
+}
+
+.restaurant-name {
+    margin-bottom: 1rem;
+    font-size: 8rem;
+}
+
+.button-nav {
+    padding: 2rem;
+    font-size: 2rem;
+    background-color: transparent;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 1rem;
+    border-bottom: 2px solid #E67163;
+    transition: transform 0.3s;
+}
+
+.button-nav.active {
+    border-bottom: 2px solid #ebc555;
+}
+
+.button-nav:hover {
+    transform: translateY(-10%);
+}
+
+/* content block that all pages load into */
+
+#content {
+    padding: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10rem;
+    margin-bottom: 4rem;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    height: 100%;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, .9);
+}
+
+/* styling for home page within content div */
+
+.home {
+    display: grid;
+    grid-template: 2 / 1;
+    align-items: center;
+    justify-items: center;
+    width: 550px;
+    height: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeIn 1.5s;
+}
+
+.home img {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    border-radius: 50%;
+}
+
+.home p {
+    padding: 1rem;
+    text-align: center;
+}
+
+/* styling for the menu page */
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4rem;
+    animation: fadeIn 1.5s;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    padding: 4rem;
+    cursor: pointer;
+}
+
+.item:hover {
+    /* tbd */
+}
+
+.item img {
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.item h2 {
+    font-size: large;
+    padding: 2rem;
+    text-align: center;
+}
+
+.item p {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* style contact page */
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 650px;
+    animation: fadeIn 1.5s;
+    margin-bottom: 8rem;
+}
+
+.contact .header {
+    background: transparent;
+    padding: 1rem;
+}
+
+.contact p {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+/* footer styling */
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-top: 1px solid #E67163;
+    background-color: rgba(0, 0, 0, .9);
+    color: #FEFEFE;
+    font-size: 1.5rem;
+    margin-top: 30rem;
+    height: 60px;
+    width: 100%;
+}
+
+.fa-github {
+  font-size: 2rem;
+}
+
+.fa-github {
+    color:#ebc555;
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Media queries */
+
+@media (max-width: 700px) {
+
+    .home,
+    .contact {
+        height: 100%;
+        width: 100%;
+    }
+
+    .menu {
+        grid-template-columns: 1fr;
+    }
+
+    .menu img {
+        width: 50%;
+    }
+}
+
+@media (max-width: 500px) {
+    html {
+        font-size: 57.5%;
+    }
+
+    .home img {
+        width: 80%;
+    }
+}
