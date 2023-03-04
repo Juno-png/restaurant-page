@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import sushiImg from './sushi.png';
 import loadContact from './contact.js';
+import loadMenu from './menu.js';
 
 window.addEventListener('load', loadHome);
 
@@ -18,6 +19,14 @@ function createNav() {
     loadHome();
   });
 
+  const menuButton = document.createElement("button");
+  menuButton.classList.add("button-nav");
+  menuButton.textContent = "Menu";
+  menuButton.addEventListener("click", (e) => {
+    if (e.target.classList.contains("active")) return;
+    setActiveButton(menuButton);
+    loadMenu();
+  });
 
   const contactButton = document.createElement("button");
   contactButton.classList.add("button-nav");
@@ -30,6 +39,7 @@ function createNav() {
 
 
   nav.appendChild(homeButton);
+  nav.appendChild(menuButton);
   nav.appendChild(contactButton);
 
   return nav;
