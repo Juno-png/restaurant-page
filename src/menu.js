@@ -10,7 +10,7 @@ function createMenu() {
     );
     menu.appendChild(
         createApps(
-            'Broiled Yellowtail',
+            'Broiled Yellowtail Kama',
             'succulent yellowtail fish that is lightly seasoned and then broiled to perfection, giving it an amazing smoky flavor.'
         )
     );
@@ -53,7 +53,7 @@ function createApps(name, description) {
     appDescription.textContent = description;
 
     const appImage = document.createElement('img');
-    appImage.src = `images/appetizers/${name.toLowerCase()}.png`;
+    appImage.src = `images/food/${name.toLowerCase()}.png`;
     appImage.alt = `${name}`;
 
     apps.appendChild(appImage);
@@ -74,7 +74,7 @@ function createSushiSash(name, description) {
     ssDescription.textContent = description;
 
     const ssImage = document.createElement('img');
-    ssImage.src = `images/sushiSash/${name.toLowerCase()}.png`;
+    ssImage.src = `images/food/${name.toLowerCase()}.png`;
     ssImage.alt = `${name}`;
 
     sushiSash.appendChild(ssImage);
@@ -95,7 +95,7 @@ function createRolls(name, description) {
     rollDescription.textContent = description;
 
     const rollImage = document.createElement('img');
-    rollImage.src = `images/rolls/${name.toLowerCase()}.png`;
+    rollImage.src = `images/food/${name.toLowerCase()}.png`;
     rollImage.alt = `${name}`;
 
     rolls.appendChild(rollImage);

@@ -103,40 +103,4 @@ function loadHome() {
   content.appendChild(createHome());
 }
 
-/* // function to create a div containing an image for home page
-function Image() {
-    const imgContainer = document.createElement('div');
-    const img = document.createElement('img');
-    img.src = sushiImg;
-    img.alt = 'sushi';
-    imgContainer.appendChild(img);
-
-    return imgContainer;
-} */
-
-// function to create a div containg a <p> with copy for home page
-/* function Copy() {
-  const copyContainer = document.createElement("div");
-  const copy = document.createElement("p");
-  copy.textContent =
-    "Sapporo Sushi is a contemporary restaurant that specializes in serving authentic Japanese cuisine. Located in the heart of the city, the restaurant offers a sophisticated and stylish dining experience that's perfect for any occasion. From sushi rolls to sashimi, the menu at Sapporo Sushi features a variety of fresh and delicious dishes that are prepared with the finest ingredients. Whether you're looking for a romantic dinner for two or a group gathering with friends, Sapporo Sushi is the perfect destination to satisfy your cravings for delectable Japanese food. Come and experience the flavors of Japan at Sapporo Sushi!";
-
-  copyContainer.appendChild(copy);
-
-  return copyContainer;
-} */
-
-
-// content selects div id='content' and then calls the 3 above functions
-// to have the generated and appends them to the content div for home page
-/* const content = document.querySelector('#content');
-const imgElement = Image();
-const copyElement = Copy(); */
-
-//create a parent div to the content div to hold the restaurant title and navbar.
 document.body.insertBefore(Header(), content);
-
-
-// append the image, and copy to the content div
-/* content.appendChild(imgElement);
-content.appendChild(copyElement); */
